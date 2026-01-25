@@ -1,10 +1,11 @@
-import './App.css'
+import Todo from './components/Todo/Todo'
+import { TasksProvider } from './contexts/tasks-contexts/TaskContext'
 
-function App() {
+const App = () => {
   return (
-    <>
-      
-    </>
+    <TasksProvider>
+      <Todo />
+    </TasksProvider>
   )
 }
 
