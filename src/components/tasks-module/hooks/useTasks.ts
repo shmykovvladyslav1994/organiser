@@ -1,23 +1,16 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react"
-import { Task, TaskRequestBody } from "../components/toDoItemContainer/interfaces/task.interface"
-import useTasksLocalstorage from "./useTasksLocalstorage"
-import taskAPI from "../api/tasks-api"
-
+import taskAPI from "../../../api/tasks-api"
+import { Task } from "../toDoItemContainer/interfaces/task.interface"
 
 const useTasks = () => {
-    // const { setTasksToLocalStorage, storedTasks } = useTasksLocalstorage()
-    const inputRef = useRef<HTMLInputElement>(null)
 
+    const inputRef = useRef<HTMLInputElement>(null)
 
     const [newTaskTitle, setNewTaskTitle] = useState('')
 
     const [tasks, setTasks] = useState<Task[]>([])
 
     const [searchQuery, setSearchQuery] = useState('')
-
-    // useEffect(() => {
-    //     setTasksToLocalStorage(tasks)
-    // }, [tasks])
 
     useEffect(() => {
         inputRef.current?.focus()
@@ -26,9 +19,6 @@ const useTasks = () => {
                 setTasks(data)
             })
     }, [])
-
-
-
 
     const filteredTasks = useMemo(() => {
         const clearSearchQuerry: string = searchQuery.trim().toLowerCase()

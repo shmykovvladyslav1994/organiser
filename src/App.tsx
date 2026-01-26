@@ -1,11 +1,17 @@
-import Todo from './components/Todo/Todo'
-import { TasksProvider } from './contexts/tasks-contexts/TaskContext'
+import { Route, Routes } from "react-router-dom"
+import Header from "./components/header/header"
+import Tasks from "./components/tasks-module/tasks"
 
 const App = () => {
   return (
-    <TasksProvider>
-      <Todo />
-    </TasksProvider>
+    <>
+      <Header />
+      <Routes>
+        <Route path="/" element={<h1>Главная</h1>} />
+        <Route path="/tasks" element={<Tasks />} />
+      </Routes>
+
+    </>
   )
 }
 

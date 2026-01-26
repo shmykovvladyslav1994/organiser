@@ -1,5 +1,5 @@
 import { useContext, useState, type Context } from 'react'
-import { TaskContext, type TaskContextType } from '../../contexts/tasks-contexts/TaskContext'
+import { TaskContext, type TaskContextType } from '../tasks-module/contexts/tasks-contexts/TaskContext'
 import Button from '../button/Button'
 import Field from '../Field/Field'
 

@@ -1,5 +1,5 @@
 import { memo, useContext, useMemo, type Context } from "react"
-import { TaskContext, type TaskContextType } from "../../contexts/tasks-contexts/TaskContext"
+import { TaskContext, type TaskContextType } from "../contexts/tasks-contexts/TaskContext"
 
 const TodoInfo = () => {
 

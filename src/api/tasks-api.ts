@@ -1,4 +1,5 @@
-import { TaskRequestBody, type Task } from "../components/toDoItemContainer/interfaces/task.interface"
+import { TaskRequestBody, type Task } from "../components/tasks-module/toDoItemContainer/interfaces/task.interface"
+
 
 const URL = 'http://localhost:4000/tasks/'
 const headers = {

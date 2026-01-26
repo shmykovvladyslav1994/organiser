@@ -1,4 +1,5 @@
-import type { Task } from "../components/toDoItemContainer/interfaces/task.interface"
+import type { Task } from "../toDoItemContainer/interfaces/task.interface"
+
 
 
 const useTasksLocalstorage = () => {

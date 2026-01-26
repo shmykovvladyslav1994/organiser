@@ -1,5 +1,5 @@
 import { useRef } from "react"
-import { Task } from "../components/toDoItemContainer/interfaces/task.interface"
+import type { Task } from "../toDoItemContainer/interfaces/task.interface"
 
 
 const useIncompleteTaskScroll = (tasks: Task[]) => {

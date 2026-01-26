@@ -1,10 +1,10 @@
 import { useContext, type Context } from "react"
-import { TaskContext, type TaskContextType } from "../../contexts/tasks-contexts/TaskContext"
-import AddTaskForm from "../AddTaskForm/AddTaskForm"
-import Button from "../button/Button"
 import SearchTaskForm from "../searchTaskForm/SearchTaskForm"
 import TodoInfo from "../toDoInfo/TodoInfo"
 import TodoList from "../toDoItemContainer/TodoList"
+import Button from "../../button/Button"
+import AddTaskForm from "../../AddTaskForm/AddTaskForm"
+import { TaskContext, type TaskContextType } from "../contexts/tasks-contexts/TaskContext"
 
 const Todo = () => {
     const { firstIncompleteTaskRef } = useContext<TaskContextType>(TaskContext as Context<TaskContextType>)
