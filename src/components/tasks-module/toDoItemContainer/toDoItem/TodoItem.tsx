@@ -1,5 +1,6 @@
 import { memo, type Context, useContext } from "react";
 import { TaskContext, type TaskContextType } from "../../contexts/tasks-contexts/TaskContext";
+import { NavLink } from "react-router-dom";
 
 const TodoItem = ({
     className,
@@ -22,6 +23,7 @@ const TodoItem = ({
 
 
     return (
+
         <li className={className + " todo-item"} ref={id === firstIncompleteTaskId ? firstIncompleteTaskRef : null}>
             <input
                 className="todo-item__checkbox"
@@ -31,12 +33,14 @@ const TodoItem = ({
                 onChange={(e) => toggleTaskComplete(id, e.target.checked)}
 
             />
-            <label
-                className="todo-item__label"
-                htmlFor={id}
-            >
-                {title}
-            </label>
+            <NavLink to={`/tasks/${id}`}>
+                <label
+                    className="todo-item__label"
+                    htmlFor={id}
+                >
+                    {title}
+                </label>
+            </NavLink>
             <button
                 className="todo-item__delete-button"
                 aria-label="Delete"
@@ -60,7 +64,9 @@ const TodoItem = ({
                     />
                 </svg>
             </button>
-        </li>
+
+        </li >
+
     )
 }
 

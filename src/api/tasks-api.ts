@@ -12,6 +12,7 @@ const taskAPI = {
         const response = await fetch(URL, { method: 'GET', headers })
         return await response.json()
     },
+    getById: (id: string): Promise<Task> => fetch(URL + id, { method: 'GET' }).then(res => res.json()),
     deleteAll: (tasks: Task[]): Promise<boolean> => {
         return Promise.all(tasks.map(task => {
             return taskAPI.delete(task.id)

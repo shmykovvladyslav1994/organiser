@@ -1,8 +1,16 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react"
 import taskAPI from "../../../api/tasks-api"
 import { Task } from "../toDoItemContainer/interfaces/task.interface"
+import { useDispatch, useSelector } from "react-redux"
+import type { rootTasksState } from "../../../state/tasks/store"
+import { initializeTasksState } from "../../../state/tasks/tasks-slice"
 
 const useTasks = () => {
+
+    const tasksasd = useSelector((state: rootTasksState) => state.tasksReduser.tasks)
+    const dispatch = useDispatch()
+    console.log(tasksasd);
+
 
     const inputRef = useRef<HTMLInputElement>(null)
 
@@ -14,6 +22,10 @@ const useTasks = () => {
 
     useEffect(() => {
         inputRef.current?.focus()
+
+        dispatch(initializeTasksState())
+
+
         taskAPI.getAll()
             .then((data) => {
                 setTasks(data)

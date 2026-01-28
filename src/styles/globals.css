@@ -1,8 +1,7 @@
 body {
   display: flex;
-  width: 100%;
   align-items: start;
-  min-height: 100vh;
+  min-height: 100svh;
   font-family: 'Inter', sans-serif;
   background-color: var(--color-gray-1);
 }
@@ -25,4 +24,9 @@ button {
   outline: 2px dashed var(--color-black);
   outline-offset: 4px;
   transition-duration: 0s !important;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }

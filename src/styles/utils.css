@@ -10,3 +10,23 @@
   clip: rect(0 0 0 0) !important;
   overflow: hidden !important;
 }
+
+.w100 {
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.aic {
+  align-items: center;
+}
+
+.jcsb {
+  justify-content: space-between;
+}
+
+.cg10 {
+  column-gap: 10px;
+}
